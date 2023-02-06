@@ -1,7 +1,0 @@
-diff --git a/_config.yml. b/_config.yml.
---- _config.yml.
-+++ _config.yml.
-@@ -1,2 +1,1 @@
--HELLO
--HELLO
-+theme: minima
