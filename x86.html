@@ -36,21 +36,9 @@
     <p>good website for context</p>
     <a href="https://www.eecg.utoronto.ca/~amza/www.mindsec.com/files/x86regs.html">here</a>
 
-    <p>---------DISASSEMBLY----------- // calling this function with a hook will just decrease our ammo without shooting </p>
-       <p>
-        char __thiscall ammoDecreaseOperation(int this)
-        {
-          int curAmmo; // eax
-        
-          if ( !*(_WORD *)(this + 0x20) )               // if has weapon, weapon is written as enums so zero is no weapon
-            return 0;
-          curAmmo = *(_DWORD *)(this + 0x24);
-          if ( !curAmmo )                               // if ammo equal to zero
-            return 0;
-          *(_DWORD *)(this + 0x24) = curAmmo - 1;       // modifying the ammo variable
-          return 1;
-        }
-        </p>
+    <p>Disassembly</p>
+    <img src="images/idaMaf.PNG" alt="" style="width:1000px;height:600px">
+ 
     <p>Written by jud(qerj)</p>
 </body>
 </html>
