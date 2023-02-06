@@ -14,7 +14,21 @@
 </head>
 <body>
     <p>In this blog, I will show you a simple walkthrough through x86 assmebly reverse engineering using cheat engine.</p>
-    <p>Heres what we are going to take a look at today.</p>
-    <img src="images/mafia.PNG" alt="" style="width: 1000px;px;height:600px;">
+    <p>Heres what we are going to take a look at today. Feel free to zoom in if you cant see it.</p>
+    <img src="images/mafia.PNG" alt="" style="width:1000px;height:600px">
+    <p>first the instruction "cmp word ptr[ecx + 20], 00" --- Checks if we have a weapon currently in our hand.
+        this would look like if(gun == nogun)
+        the jne --- jumps if not equal to.
+        since we have a gun it will jump because its not equal to no gun.
+        Therefore leading us to eax that will contain our ammo.
+        the instruction "mov eax,[eax + 24]" will move our current ammo "eax + 0x24" into eax on the left.
+        eax usually holds integers for now atleast.</p>
+        <img src="images/maf1.PNG" alt="" style="width:1000px;height:600px">
+    <p>which brings us to the "test eax, eax", which will check if our ammo is zero or not.
+        since our ammo is not zero that takes us to jne instruction right below it.
+        that present jne instruction will now jump to dec eax which will decrease our ammo.
+        from there we place the new value of eax into the ammo address value mov [eax + 0x24], eax
+        finally from there we get to "mov al, 01" which is equivalent to return 1, or return true</p>
+        <img src="images/maf2.PNG" alt="" style="width:1000px;height:600px">
 </body>
 </html>
