@@ -22,7 +22,9 @@
         since we have a gun it will jump because its not equal to no gun.
         Therefore leading us to eax that will contain our ammo.
         the instruction "mov eax,[eax + 24]" will move our current ammo "eax + 0x24" into eax on the left.
-        eax is a generic register just like ebx and edx. Generic registers can be used for any integer, Boolean, logical, or memory operation.</p>
+        eax is a generic register just like ebx and edx. Generic registers can be used for any integer, Boolean, logical, or memory operation.
+        ecx is also generic, sometimes used as a counter by repetitive
+        instructions that require counting</p>
         <img src="images/maf1.PNG" alt="" style="width:1000px;height:600px">
     <p>which brings us to the "test eax, eax", which will check if our ammo is zero or not.
         since our ammo is not zero that takes us to jne instruction right below it.
