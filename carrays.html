@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complicated Arrays</title>
+</head>
+<body>
+    <img src="images/complicatedarrays.png" alt="" style="width:1000px;height:600px">
+    <p>Think of arrays as simple unions. They are close together in memory.</p>
+    <p>here we make a array of type int arrayt with the lenght of 5 * 4 bytes, 5 elements and 4 bytes each element.</p>
+    <p>we then make a variable equal to this array as a integer cast..</p>
+    <p>allowing us to do arithmetic on the array poo = poo + 1 * 4</p>
+    <P>this is sort of what this looks like when a program is compiled and ran</P>
+    <p>we first got the base address which is poo which is the address of arrayt. And then we add one which is our index so it would be</p>
+    <p>arrayt[1]. We then have 4 which is our byte scaler value. Since this is a interger it's size is 4 bytes long.</p>
+    <p>we then cast back poo to a pointer and dereference the pointer to get the value at arrayt[1].</p>
+    <p>with this done the value of the address at arrayt[1] is edited! Printing this out gives out 5!</p>
+    <p>  </p>
+    <p>You will see this man times in intel assembly for example mov eax, [ecx + 0x14 * 4]</p>
+    <p>Loop or a pointer you will never know... unless you figure it out of course!</p>
+</body>
+</html>
